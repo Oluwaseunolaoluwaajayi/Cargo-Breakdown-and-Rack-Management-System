@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In - ABC Aviation Company</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>ABC Aviation Company</h1>
+        <p id="datetime">Date and Time: <span id="current-datetime"></span></p>
+      </header>
+
+      <section class="signin-form">
+        <h2>Staff Sign-In</h2>
+        <form id="signin-form">
+          <div class="form-group">
+            <label for="staff-name">Staff Name:</label>
+            <input
+              type="text"
+              id="staff-name"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="staff-number">Staff Number:</label>
+            <input
+              type="text"
+              id="staff-number"
+              placeholder="Enter your staff number"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="staff-position">Staff Position:</label>
+            <select id="staff-position" required>
+              <option value="" disabled selected>Select your position</option>
+              <option value="Warehouse Manager">Warehouse Manager</option>
+              <option value="Cargo Handler">Cargo Handler</option>
+              <option value="Inventory Clerk">Inventory Clerk</option>
+              <option value="Supervisor">Supervisor</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <button type="submit">Sign In</button>
+        </form>
+        <div id="signin-result" class="result"></div>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

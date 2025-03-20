@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CBRMS - Cargo Breakdown and Rack Management System</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Cargo Breakdown and Rack Management System</h1>
+        <p>Automate cargo sorting and manage inventory in real-time</p>
+      </header>
+
+      <!-- Cargo Input Section -->
+      <section class="cargo-input">
+        <h2>Add New Cargo</h2>
+        <form id="cargo-form">
+          <div class="form-group">
+            <label for="awb">Airway Bill (AWB):</label>
+            <input type="text" id="awb" placeholder="Enter AWB" required />
+          </div>
+          <div class="form-group">
+            <label for="weight">Weight (kg):</label>
+            <input
+              type="number"
+              id="weight"
+              step="0.1"
+              min="0"
+              placeholder="Enter weight of cargo"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="pieces">No of Pieces Received:</label>
+            <input
+              type="number"
+              id="pieces"
+              min="1"
+              placeholder="Enter No of Pieces Received"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="description">Cargo Description:</label>
+            <textarea
+              id="description"
+              placeholder="Enter cargo description"
+              rows="5"
+              cols="50"
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="discrepancy">Discrepancy:</label>
+            <textarea
+              id="discrepancy"
+              placeholder="Enter cargo discrepancy"
+              rows="5"
+              cols="50"
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="hold-note">Hold on Cargo:</label>
+            <textarea
+              id="hold-note"
+              placeholder="Enter hold note"
+              rows="5"
+              cols="50"
+            ></textarea>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+        <div id="submit-result" class="result"></div>
+      </section>
+
+      <!-- Real-Time Inventory Section -->
+      <section class="inventory">
+        <h2>Real-Time Inventory</h2>
+        <table id="inventory-table">
+          <thead>
+            <tr>
+              <th>AWB</th>
+              <th>Weight (kg)</th>
+              <th>Pieces</th>
+              <th>Description</th>
+              <th>Discrepancy</th>
+              <th>Hold Note</th>
+              <th>Status</th>
+              <th>Location</th>
+              <th>Last Updated</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Inventory rows will be added dynamically via JS -->
+          </tbody>
+        </table>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
